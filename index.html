@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario de Etiquetas HTML5</title>
+    <link rel="stylesheet" href="css/glosary.css">
+    <script>
+        function toggleCategory(category) {
+            var rows = document.getElementsByClassName(category);
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].classList.toggle("hidden");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Glosario de Etiquetas HTML5</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Etiqueta</th>
+                    <th>Qué es</th>
+                    <th>Sintaxis</th>
+                    <th>Para qué se usa</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Formularios -->
+                <tr id="formularios" class="category" onclick="toggleCategory('formularios')">
+                    <td colspan="5">Formularios</td>
+                </tr>
+                <!-- Form  -->
+                <tr class="formularios hidden">
+                    <td>&lt;form&gt;</td>
+                    <td>Define un formulario HTML</td>
+                    <td>
+                        <pre><code>&lt;form action="submit_form.php"&gt;
+                        &lt;input type="text"&gt;
+                        &lt;input type="submit"&gt;
+                        &lt;/form&gt;</code></pre>
+                    </td>
+                    <td>Se usa para recopilar datos del usuario</td>
+                    <td>
+                        <div class="example-container">
+                            <form action="#">
+                                <label for="name">Nombre:</label>
+                                <input type="text" id="name" name="name">
+                                <input type="submit" value="Enviar">
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Input -->
+                <tr class="formularios hidden">
+                    <td>&lt;input&gt;</td>
+                    <td>Define un campo de entrada</td>
+                    <td>
+                        <pre><code>&lt;input type="text"&gt;</code></pre>
+                    </td>
+                    <td>Se usa para recibir datos del usuario</td>
+                    <td>
+                        <div class="example-container">
+                            <input type="text" placeholder="Escribe algo aquí">
+                        </div>
+                    </td>
+                </tr>
+                <!-- textarea -->
+                <tr class="formularios hidden">
+                    <td>&lt;textarea&gt;</td>
+                    <td>Define un área de texto</td>
+                    <td>
+                        <pre><code>&lt;textarea&gt;Texto aquí&lt;/textarea&gt;</code></pre>
+                    </td>
+                    <td>Se usa para recibir texto largo del usuario</td>
+                    <td>
+                        <div class="example-container">
+                            <textarea rows="4" cols="50">Escribe aquí...</textarea>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Botón -->
+                <tr class="formularios hidden">
+                    <td>&lt;button&gt;</td>
+                    <td>Define un botón</td>
+                    <td>
+                        <pre><code>&lt;button&gt;Haz clic aquí&lt;/button&gt;</code></pre>
+                    </td>
+                    <td>Permiten interactuar con el formulario o ejecutar acciones específicas.</td>
+                    <td>
+                        <div class="example-container">
+                            <button type="button" onclick="alert('¡Botón clicado!')">Haz clic aquí</button>
+                        </div>
+                    </td>
+                </tr>
+                <!--select-->
+                <tr class="formularios hidden">
+                    <td>&lt;select&gt;</td>
+                    <td>Define un menú desplegable</td>
+                    <td>
+                        <pre><code>&lt;select&gt;
+    &lt;option value="opcion1"&gt;Opción 1&lt;/option&gt;
+    &lt;option value="opcion2"&gt;Opción 2&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                    </td>
+                    <td>Se usa para seleccionar una opción de una lista</td>
+                    <td>
+                        <div class="example-container">
+                            <select>
+                                <option value="opcion1">Opción 1</option>
+                                <option value="opcion2">Opción 2</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <!-- options -->
+                <tr class="formularios hidden">
+                    <td>&lt;option&gt;</td>
+                    <td>Define una opción en un menú desplegable</td>
+                    <td>
+                        <pre><code>&lt;option value="opcion1"&gt;Opción 1&lt;/option&gt;</code></pre>
+                    </td>
+                    <td>Se usa dentro de un elemento select</td>
+                    <td>
+                        <div class="example-container">
+                            <select>
+                              <option value="hombre">Hombre</option>  
+                              <option value="mujer">Mujer</option>                            
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <!--label-->
+                <tr class="formularios hidden">
+                    <td>&lt;label&gt;</td>
+                    <td>Define una etiqueta para un elemento de formulario</td>
+                    <td>
+                        <pre><code>&lt;label for="name"&gt;Nombre:&lt;/label&gt;</code></pre>
+                    </td>
+                    <td>Asocia una etiqueta con un campo de entrada</td>
+                    <td>
+                        <div class="example-container">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                    </td>
+                </tr>
+                <!-- fieldset-->
+                <tr class="formularios hidden">
+                    <td>&lt;fieldset&gt;</td>
+                    <td>Define un grupo de elementos de formulario</td>
+                    <td>
+                        <pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Grupo de opciones&lt;/legend&gt;
+    &lt;input type="checkbox"&gt; Opción 1&lt;/input&gt;
+    &lt;input type="checkbox"&gt; Opción 2&lt;/input&gt;
+    &lt;/fieldset&gt;</code></pre>
+                    </td>
+                    <td>Se usa para agrupar elementos relacionados</td>
+                    <td>
+                        <div class="example-container">
+                            <fieldset>
+                                <legend>Grupo de opciones</legend>
+                                <input type="checkbox" id="opcion1" name="opcion1">
+                                <label for="opcion1">Opción 1</label><br>
+                                <input type="checkbox" id="opcion2" name="opcion2">
+                                <label for="opcion2">Opción 2</label><br>
+                            </fieldset>
+                        </div>
+                    </td>
+                </tr>
+                <!-- legend-->
+                <tr class="formularios hidden">
+                    <td>&lt;legend&gt;</td>
+                    <td>Define un título para un fieldset</td>
+                    <td>
+                        <pre><code>&lt;legend&gt;Texto del título&lt;/legend&gt;</code></pre>
+                    </td>
+                    <td>Se usa para describir el contenido de un fieldset</td>
+                    <td>
+                        <div class="example-container">
+                          <fieldset>
+                            <legend>Información de contacto</legend>
+                            <input type="text" name="email" />
+                        </fieldset>
+                        
+                        </div>
+                    </td>
+                </tr>
+                <!--optgroup -->
+                <tr class="formularios hidden">
+                    <td>&lt;optgroup&gt;</td>
+                    <td>Define un grupo de opciones dentro de un select</td>
+                    <td>
+                        <pre><code>&lt;optgroup label="Grupo 1"&gt;<br>&lt;option value="opcion1"&gt;Opción 1&lt;/option&gt;<br>&lt;option value="opcion2"&gt;Opción 2&lt;/option&gt;<br>&lt;/optgroup&gt;</code></pre>
+                    </td>
+                    <td>Se usa para agrupar opciones relacionadas</td>
+                    <td>
+                        <div class="example-container">
+                            <select>
+                                <optgroup label="Frutas">
+                                    <option value="manzana">Manzana</option>
+                                    <option value="naranja">Naranja</option>
+                                </optgroup>
+                                <optgroup label="Verduras">
+                                    <option value="zanahoria">Zanahoria</option>
+                                    <option value="broccoli">Brócoli</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <!-- datalist-->
+                <tr class="formularios hidden">
+                    <td>&lt;datalist&gt;</td>
+                    <td>Define una lista de opciones predefinidas para un input</td>
+                    <td>
+                        <pre><code>&lt;input list="frutas"&gt;<br>&lt;datalist id="frutas"&gt;<br>&lt;option value="Manzana"&gt;<br>&lt;option value="Naranja"&gt;<br>&lt;/datalist&gt;</code></pre>
+                    </td>
+                    <td>Se usa para sugerir opciones al usuario</td>
+                    <td>
+                        <div class="example-container">
+                            <input list="frutas" placeholder="Selecciona una fruta">
+                            <datalist id="frutas">
+                                <option value="Manzana">
+                                <option value="Naranja">
+                                <option value="Plátano">
+                            </datalist>
+                        </div>
+                    </td>
+                    
+                <!-- Semánticas -->
+                <tr class="category" onclick="toggleCategory('semanticas')">
+                    <td colspan="5">Semánticas</td>
+                </tr>
+                <!-- header -->
+                <tr class="semanticas hidden">
+                    <td>&lt;header&gt;</td>
+                    <td>Define un encabezado para un documento o sección</td>
+                    <td>
+                        <pre><code>&lt;header&gt;
+    &lt;h1&gt;Título&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href="#inicio"&gt;Inicio&lt;/a&gt;
+        &lt;a href="#servicios"&gt;Ayuda&lt;/a&gt;
+        &lt;a href="#contacto"&gt;Contacto&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+                    </td>
+                    <td>Se usa para definir la parte superior de una página o sección</td>
+                    <td>
+                        <div class="example-container">
+                            <header>
+                                <h1>Bienvenido a Mi Sitio</h1>
+                                <nav>
+                                    <a href="#inicio">Inicio</a> |
+                                    <a href="#servicios">Ayuda</a> |
+                                    <a href="#contacto">Contacto</a>
+                                </nav>
+                            </header>
+                        </div>
+                    </td>
+                </tr>
+                <!-- footer --> 
+                 <tr class="semanticas hidden">
+                    <td>&lt;footer&gt;</td>
+                    <td>Define un pie de página para un documento o sección</td>
+                    <td>
+                        <pre><code>&lt;footer&gt;      
+    &lt;p&gt;Derechos reservados&lt;/p&gt;<pre>
+                    </td>
+                    <td>Se usa para definir la parte inferior de una página o sección</td>
+                    <td>
+                        <div class="example-container">
+                            <footer>
+                                <p>&copy; 2025 Mi Sitio. Todos los derechos reservados.</p>
+                            </footer>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- article-->
+                <tr class="semanticas hidden">
+                    <td>&lt;article&gt;</td>
+                    <td>Define contenido independiente</td>
+                    <td>
+                        <pre><code>&lt;article&gt;
+    &lt;h1&gt;Título&lt;/h1&gt;
+    &lt;p&gt;Contenido del artículo.&lt;/p&gt;
+&lt;/articulo&gt;</code></pre>
+                    </td>
+                    <td>Usado para blogs, noticias</td>
+                    <td>
+                        <div class="example-container">
+                            <article class="forecast">
+                                <h1></h1>
+                                <article class="day-forecast">
+                                    <h2>TEXTO </h2>
+                                    <p>segundo texto.</p>
+                                </article>
+                                <article class="day-forecast">
+                                    <h2>05 Abril 1994</h2>
+                                    <p>Kurt Cobain, líder y vocalista de Nirvana, fue encontrado muerto en su hogar en Seattle</p>
+                                </article>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Textos -->
+                <tr class="category" onclick="toggleCategory('textos')">
+                    <td colspan="5">Textos</td>
+                </tr>
+
+                <!--<h1>-->
+                  <tr class="textos hidden">
+                    <td>&lt;h1&gt;</td>
+                    <td>Define encabezados de diferentes niveles</td>
+                    <td>
+                        <pre><code>&lt;h1&gt;Encabezado de nivel 1&lt;/h1&gt;</code></pre>
+                        <pre><code>&lt;h2&gt;Encabezado de nivel 2&lt;/h2&gt;</code></pre>
+                    </td>
+                    <td>Se usa para definir títulos y subtítulos dentro de un documento HTML.</td>
+                    <td>
+                        <div class="example-container">
+                          <h1>Bienvenidos a mi Glosario</h1>
+                          <h2>Bueno y ahora que hago</h2>
+                          <h3>Si</h3>
+                          <h4>&copy; Todos los derechos reservados 2025</h4>
+                        </div>
+                    </td>
+                    <!--<p>-->
+                  <tr class="textos hidden">
+                  <td>&lt;p&gt;</td> 
+                  <td>Define un párrafo de texto.</td>
+                  <td>
+                    <pre><code>&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;</code></pre>
+                  </td> 
+                  <td>Se usa para agrupar texto en un párrafo dentro de un documento HTML.</td>
+                  <td>
+                    <div class="example-container">
+                      <p>Hola y adios</p>
+                    </div>
+                  </td>
+                  </tr>
+                  <!--br-->
+                <tr class="textos hidden">
+                  <td>&lt;br&gt;</td>
+                  <td>Inserta un salto de línea.</td>
+                  <td>
+                    <pre><code>salto de linea&lt;br&gt;</code></pre>
+                  </td>
+                  <td>Se usa para insertar un salto de línea en el texto, sin crear un nuevo párrafo.</td>
+                  <td>
+                    <div class="example-container">
+                      Hola, soy un texto.<br>Y ahora estoy en una nueva línea <br><br> o dos saltos de línea
+                    </div>
+                  </td>
+                </tr>
+                <!--hr-->
+                <tr class="textos hidden">
+                    <td>&lt;hr&gt;</td>
+                    <td>Inserta una línea horizontal.</td>
+                    <td>
+                        <pre><code>Texto antes de la línea&lt;hr&gt;Texto después de la línea</code></pre>
+                    </td>
+                    <td>Se usa para separar contenido visualmente.</td>
+                    <td>
+                        <div class="example-container">
+                            <p>Texto antes de la línea</p>
+                            <hr>
+                            <p>Texto después de la línea</p>
+                        </div>
+                    </td>
+                </tr>
+                <!--blockquote-->
+                <tr class="textos hidden">
+                    <td>&lt;blockquote&gt;</td>
+                    <td>Define una cita de bloque</td>
+                    <td>
+                        <pre><code>&lt;blockquote&gt;Texto de la cita&lt;/blockquote&gt;</code></pre>
+                    </td>
+                    <td>Se usa para citar texto de otra fuente</td>
+                    <td>
+                        <div class="example-container">
+                            <blockquote cite="https://www.ejemplo.com">
+                                "Este es un ejemplo de cita."
+                            </blockquote>
+                        </div>
+                    </td>
+                </tr>
+                <!--pre-->
+                <tr class="textos hidden">
+                    <td>&lt;pre&gt;</td>
+                    <td>Define texto preformateado</td>
+                    <td>
+                        <pre><code>&lt;pre&gt;<pre>
+                            function saludo() {
+                                console.log("Hola Mundo!");
+                            }
+                            &lt;/pre&gt;</code></pre>
+                    </td>
+                    <td>Se usa para mostrar texto con formato fijo</td>
+                    <td>
+                        <div class="example-container">
+                          <pre>
+                            function saludo() {
+                                console.log("Hola Mundo!");
+                            }
+                        </pre>                        
+                        </div>
+                    </td>
+                </tr>
+                <!--code-->
+                <tr class="textos hidden">
+                    <td>&lt;code&gt;</td>
+                    <td>Define un fragmento de código</td>
+                    <td>
+                        <pre><code>&lt;code&gt;console.log("Hola Mundo");&lt;/code&gt;</code></pre>
+                    </td>
+                    <td>Se usa para mostrar código fuente</td>
+                    <td>
+                        <div class="example-container">
+                          <p>El siguiente código en JS imprime "Hola Mundo":</p>
+                          <code>console.log("Hola Mundo");</code>
+                        </div>
+                    </td>
+                </tr>
+                <!--span-->
+                <tr class="textos hidden">
+                    <td>&lt;span&gt;</td>
+                    <td>Define un contenedor en línea</td>
+                    <td>
+                        <pre><code>&lt;span style="color: red;"&gt; Texto aquí&lt;/span&gt;</code></pre>
+                    </td>
+                    <td>Se usa para aplicar estilos a partes del texto</td>
+                    <td>
+                        <div class="example-container">
+                            <p>Este es un texto <span style="color: red;">rojo</span>.</p>
+                        </div>
+                    </td>
+                </tr>
+                <!--strong-->
+                <tr class="textos hidden">
+                    <td>&lt;strong&gt;</td>
+                    <td>Define texto importante</td>
+                    <td>
+                        <pre><code>&lt;strong&gt;Texto importante&lt;/strong&gt;</code></pre>
+                    </td>
+                    <td>Se usa para resaltar texto importante</td>
+                    <td>
+                        <div class="example-container">
+                            <p>Este es un texto <strong>importante</strong>.</p>
+                        </div>
+                    </td>
+                </tr>
+                <!--em-->
+                <tr class="textos hidden">
+                    <td>&lt;em&gt;</td>
+                    <td>Define texto enfatizado</td>
+                    <td>
+                        <pre><code>&lt;em&gt;Texto enfatizado&lt;/em&gt;</code></pre>
+                    </td>
+                    <td>Se usa para enfatizar partes del texto</td>
+                    <td>
+                        <div class="example-container">
+                            <p>Este es un texto <em>enfatizado</em>.</p>
+                        </div>
+                    </td>
+                </tr>
+                <!--small-->
+                <tr class="textos hidden">
+                    <td>&lt;small&gt;</td>
+                    <td>Define texto pequeño</td>
+                    <td>
+                        <pre><code>&lt;small&gt;Texto pequeño&lt;/small&gt;</code></pre>
+                    </td>
+                    <td>Se usa para mostrar texto en un tamaño menor</td>
+                    <td>
+                        <div class="example-container">
+                            <p>Este es un texto <small>pequeño</small>.</p>
+                        </div>
+                    </td> 
+                </tr>
+                <!--u-->
+                <tr class="textos hidden">
+                    <td>&lt;u&gt;</td>
+                    <td>Define texto subrayado</td>
+                    <td>
+                        <pre><code>&lt;u&gt;Texto subrayado&lt;/u&gt;</code></pre>
+                    </td>
+                    <td>Se usa para subrayar partes del texto</td>
+                    <td>
+                        <div class="example-container">
+                            <p>Este es un texto <u>subrayado</u>.</p>
+                        </div>
+                    </td>
+                </tr>
+                <!--del-->
+                <tr class="textos hidden">
+                    <td>&lt;del&gt;</td>
+                    <td>Define texto eliminado</td>
+                    <td>
+                        <pre><code>&lt;del&gt;Texto eliminado&lt;/del&gt;</code></pre>
+                    </td>
+                    <td>Se usa para mostrar texto que ha sido eliminado</td>
+                    <td>
+                        <div class="example-container">
+                            <p>Este es un texto <del>eliminado</del>.</p>
+                        </div>
+                    </td>
+                </tr>
+                <!--ins-->  
+                <tr class="textos hidden">
+                    <td>&lt;ins&gt;</td>
+                    <td>Define texto insertado</td>
+                    <td>
+                        <pre><code>&lt;ins&gt;Texto insertado&lt;/ins&gt;</code></pre>
+                    </td>
+                    <td>Se usa para mostrar texto que ha sido insertado</td>
+                    <td>
+                        <div class="example-container">
+                            <p>Este es un texto <ins>insertado</ins>.</p>
+                        </div>
+                    </td> 
+                </tr>
+                <!--mark-->
+                <tr class="textos hidden">
+                    <td>&lt;mark&gt;</td>
+                    <td>Resalta texto</td>
+                    <td>
+                        <pre><code>&lt;mark&gt;Texto resaltado&lt;/mark&gt;</code></pre>
+                    </td>
+                    <td>Se utiliza para resaltar partes del texto</td>
+                    <td>
+                        <div class="example-container">
+                            <p>Este es un ejemplo de texto <mark>resaltado</mark>.</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Enlaces -->
+                <tr class="category" onclick="toggleCategory('enlaces')">
+                    <td colspan="5">Enlaces</td>
+                </tr>
+                <tr class="enlaces hidden">
+                    <td>&lt;a&gt;</td>
+                    <td>Define un enlace</td>
+                    <td>
+                        <pre><code>&lt;a href="https://www.enlace.com"&gt;Haz clic aquí&lt;/a&gt;</code></pre>
+                    </td>
+                    <td>Usado para navegar entre páginas web</td>
+                    <td>
+                        <div class="example-container">
+                            <a href="https://youtu.be/yj7w7XSIYLA?si=h5wH4WibELyPVguX" target="_blank">Haz clic aquí</a>
+                        </div>
+                    </td>
+                </tr>
+                
+                <!--enlazar hojas estilo-->
+                <tr class="enlaces hidden">
+                    <td>&lt;link&gt;</td>
+                    <td>Define una relación entre un documento y un recurso externo</td>
+                    <td>
+                        <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+                    </td>
+                    <td>Usado para enlazar hojas de estilo CSS y darle un mejor aspecto al sitio</td>
+                    <td>
+                        <div class="example-container">
+                              <h1>Ejemplo Dinámico de Enlace a Hoja de Estilo</h1>
+                              <p>Modifica el código CSS en el área de texto a continuación para ver cómo afecta el ejemplo en vivo:</p>
+                              
+                              <!-- Área para que el usuario edite código CSS -->
+                              <textarea id="styleInput" placeholder="Escribe tu código CSS aquí..."></textarea>
+                          
+                              <script>
+                                  // Obtiene el área de texto y el contenedor donde se mostrará el ejemplo
+                                  const styleInput = document.getElementById('styleInput');
+                                  const exampleContainer = document.getElementById('example');
+                          
+                                  // Función para actualizar el ejemplo en tiempo real
+                                  styleInput.addEventListener('input', function() {
+                                      // Crea un nuevo estilo
+                                      const style = document.createElement('style');
+                                      style.textContent = styleInput.value;
+                                      // Elimina cualquier estilo anterior para actualizarlo
+                                      document.head.querySelectorAll('style').forEach(el => el.remove());
+                                      // Añade el nuevo estilo al encabezado
+                                      document.head.appendChild(style);
+                          
+                                      // Actualiza el contenido del ejemplo
+                                      exampleContainer.innerHTML = `<p>Este es el contenido del ejemplo. Si modificas el CSS en el área de texto, los cambios se verán reflejados aquí.</p>`;
+                                  });
+                              </script>
+                        </div>
+                    </td>
+                </tr>
+                <!-- <a download>-->
+                <tr class="enlaces hidden">
+                    <td>&lt;a download&gt;</td>
+                    <td>Define un enlace para descargar un archivo</td>
+                    <td>
+                        <pre><code>&lt;a href="aqui pones tu archivo" download&gt;Descargar&lt;/a&gt;</code></pre>
+                    </td>
+                    <td>Usado para permitir la descarga de archivos</td>
+                    <td>
+                        <div class="example-container">
+                            <a href="image/OIP.jpeg" download>Descargar archivo</a>
+                        </div>
+                    </td>
+                </tr>
+                <!--correo-->
+                <tr class="enlaces hidden">
+                  <td>&lt;a mailto&gt;</td>
+                  <td>Define un enlace para enviar un correo electrónico</td>
+                  <td>
+                    <pre><code>&lt;a href="mailto:ejemplo@correo.com"&gt;Enviar un correo&lt;/&gt;</code></pre>
+                  </td>
+                  <td>Usado para abrir el cliente de correo electrónico del usuario</td>
+                  <td>
+                    <div class="example-container">
+                      <a href="mailto:ejemplo@correo.com">Enviar un correo</a>
+                    </div>
+                  </td>
+                </tr>
+                <!--Enlace a una Sección Específica de la Misma Página-->
+                <tr class="enlaces hidden">
+                    <td>&lt;a href="#seccion"&gt;</td>
+                    <td>Define un enlace a una sección específica de la misma página</td>
+                    <td>
+                        <pre><code>&lt;a href="#seccion"&gt;Ir a la sección&lt;/a&gt;</code></pre>
+                    </td>
+                    <td>Usado para navegar dentro de la misma página</td>
+                    <td>
+                        <div class="example-container">
+                          <h2>Este es un ejemplo de sección dentro de la misma página.</h2>
+                          <p id="seccion">Sección de ejemplo: Formulario</p>
+                            <a href="#formularios">Ir a la sección</a>
+                        </div>
+                    </td>
+                </tr>
+                <!--Enlace con Atributo-->
+                <tr class="enlaces hidden">
+                    <td>&lt;a title&gt;</td>
+                    <td>Define un enlace con un atributo de título</td>
+                    <td>
+                        <pre><code>&lt;a href="https://www.ejemplo.com" title="Texto"&gt;Texto&lt;/a&gt;</code></pre>
+                    </td>
+                    <td>Usado para proporcionar información adicional sobre el enlace</td>
+                    <td>
+                        <div class="example-container">
+                            <a href="https://www.ejemplo.com" title="Unas frias o que Ing.">Coloca el cursor en el enlace</a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Tablas -->
+                <tr class="category" onclick="toggleCategory('tablas')">
+                    <td colspan="5">Tablas</td>
+                </tr>
+                <!-- caption-->
+                <tr class="tablas hidden">
+                    <td>&lt;caption&gt;</td>
+                    <td>Define un título para una tabla</td>
+                    <td>
+                        <pre><code>&lt;table&gt;<br>&lt;caption&gt;Título de la tabla&lt;/caption&gt;<br>&lt;/table&gt;</code></pre>
+                    </td>
+                    <td>Usado para describir el contenido de la tabla</td>
+                    <td>
+                        <div class="example-container">
+                            <table border="1">
+                                <caption>Título de la tabla</caption>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="tablas hidden">
+                    <td>&lt;table&gt;</td>
+                    <td>Define una tabla</td>
+                    <td>
+                        <pre><code>&lt;table&gt;<br>&lt;tr&gt;<br>&lt;th&gt;Encabezado&lt;/th&gt;<br>&lt;td&gt;Dato&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/table&gt;</code></pre>
+                    </td>
+                    <td>Usado para mostrar datos tabulados</td>
+                    <td>
+                        <div class="example-container">
+                            <table border="1">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                </tr>
+                                <tr>
+                                    <td>Celeste</td>
+                                    <td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>Maritzet</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>Mike</td>
+                                    <td>21</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <!-- tr-->
+                <tr class="tablas hidden">
+                    <td>&lt;tr&gt;</td>
+                    <td>Define una fila en una tabla</td>
+                    <td>
+                        <pre><code>&lt;tr&gt;<br>&lt;td&gt;Celeste&lt;/td&gt;<br>&lt;/tr&gt;</code></pre>
+                    </td>
+                    <td>Usado para agrupar celdas en una fila</td>
+                    <td>
+                        <div class="example-container">
+                            <table border="1">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                </tr>
+                                <tr>
+                                    <td>Celeste</td>
+                                    <td>21</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <!-- th-->
+                <tr class="tablas hidden">
+                    <td>&lt;th&gt;</td>
+                    <td>Define una celda de encabezado en una tabla</td>
+                    <td>
+                        <pre><code>&lt;th&gt;Nombre&lt;/th&gt;<br>&lt;th&gt;Edad&lt;/th&gt;</code></pre>
+                    </td>
+                    <td>Usado para definir encabezados de columnas o filas</td>
+                    <td>
+                        <div class="example-container">
+                            <table border="1">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <!--tbody-->
+                <tr class="tablas hidden">
+                    <td>&lt;tbody&gt;</td>
+                    <td>Define el cuerpo de una tabla</td>
+                    <td>
+                        <pre><code>&lt;table&gt;<br>&lt;tbody&gt;<br>&lt;/tbody&gt;<br>&lt;/table&gt;</code></pre>
+                    </td>
+                    <td>Usado para agrupar el contenido de la tabla</td>
+                    <td>
+                        <div class="example-container">
+                          <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>María</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </td>
+                </tr>
+                <!--tfoot-->
+                <tr class="tablas hidden">
+                    <td>&lt;tfoot&gt;</td>
+                    <td>Define el pie de una tabla</td>
+                    <td>
+                        <pre><code>&lt;table&gt;<br>&lt;tfoot&gt;<br>&lt;/tfoot&gt;<br>&lt;/table&gt;</code></pre>
+                    </td>
+                    <td>Usado para agrupar el pie de la tabla</td>
+                    <td>
+                        <div class="example-container">
+                          <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Leche</td>
+                                    <td>$2.50</td>
+                                </tr>
+                                <tr>
+                                    <td>Pan</td>
+                                    <td>$1.00</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>$3.50</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        
+                        </div>
+                    </td>
+                </tr>
+                <!--colgroup-->
+                <tr class="tablas hidden">
+                    <td>&lt;colgroup&gt;</td>
+                    <td>Define un grupo de columnas en una tabla</td>
+                    <td>
+                        <pre><code>&lt;table&gt;<br>&lt;colgroup&gt;<br>&lt;/colgroup&gt;<br>&lt;/table&gt;</code></pre>
+                    </td>
+                    <td>Usado para aplicar estilos a grupos de columnas</td>
+                    <td>
+                        <div class="example-container">
+                          <table border="1">
+                            <colgroup>
+                                <col style="background-color: yellow;">
+                                <col style="background-color: lightgreen;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Celeste</td>
+                                    <td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>Maritzet</td>
+                                    <td>22</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Listas -->
+                <tr class="category" onclick="toggleCategory('listas')">
+                    <td colspan="5">Listas</td>
+                </tr>
+                <!--ul-->
+                <tr class="listas hidden">
+                    <td>&lt;ul&gt;</td>
+                    <td>Define una lista no ordenada</td>
+                    <td>
+                        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </td>
+                    <td>Usado para listar elementos sin orden específico</td>
+                    <td>
+                        <div class="example-container">
+                            <ul>
+                                <li>Elemento 1</li>
+                                <li>Elemento 2</li>
+                                <li>Elemento 3</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+              <!--ol-->
+                <tr class="listas hidden">
+                    <td>&lt;ol&gt;</td>
+                    <td>Define una lista ordenada</td>
+                    <td>
+                        <pre><code>&lt;ol&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    </td>
+                    <td>Usado para listar elementos en un orden específico</td>
+                    <td>
+                        <div class="example-container">
+                            <ol>
+                                <li>Elemento 1</li>
+                                <li>Elemento 2</li>
+                                <li>Elemento 3</li>
+                            </ol>
+                        </div>
+                    </td>
+                </tr>
+                <!--li-->
+                <tr class="listas hidden">
+                    <td>&lt;li&gt;</td>
+                    <td>Define un elemento de lista</td>
+                    <td>
+                        <pre><code>&lt;li&gt;Elemento de lista&lt;/li&gt;</code></pre>
+                    </td>
+                    <td>Usado dentro de listas (ul o ol)</td>
+                    <td>
+                        <div class="example-container">
+                            <ul>
+                                <li>Elemento de lista</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <!--dl-->
+                <tr class="listas hidden">
+                    <td>&lt;dl&gt;</td>
+                    <td>Define una lista de definiciones</td>
+                    <td>
+                        <pre><code>&lt;dl&gt;<br>&lt;dt&gt;Término&lt;/dt&gt;<br>&lt;dd&gt;Definición&lt;/dd&gt;<br>&lt;/dl&gt;</code></pre>
+                    </td>
+                    <td>Usado para definir términos y sus descripciones</td>
+                    <td>
+                        <div class="example-container">
+                          <dl>
+                            <dt>JavaScript</dt>
+                            <dd>Lenguaje de programación para la web.</dd>
+                        </dl>
+                        </div>
+                    </td>
+                </tr>
+                <!--dt-->
+                <tr class="listas hidden">
+                    <td>&lt;dt&gt;</td>
+                    <td>Define un término en una lista de definiciones</td>
+                    <td>
+                        <pre><code>&lt;dt&gt;Término&lt;/dt&gt;</code></pre>
+                    </td>
+                    <td>Usado dentro de listas de definiciones (dl)</td>
+                    <td>
+                        <div class="example-container">
+                          <dl>
+                            <dt>CPU</dt>
+                            <dd>Unidad central de procesamiento.</dd>
+                        </dl>
+                        </div>
+                    </td>
+                </tr>
+                <!--dd-->
+                <tr class="listas hidden">
+                    <td>&lt;dd&gt;</td>
+                    <td>Define una descripción en una lista de definiciones</td>
+                    <td>
+                        <pre><code>&lt;dd&gt;Descripción&lt;/dd&gt;</code></pre>
+                    </td>
+                    <td>Usado dentro de listas de definiciones (dl)</td>
+                    <td>
+                        <div class="example-container">
+                          <dl>
+                            <dt>HTML</dt>
+                            <dd>Lenguaje de marcado para la web.</dd>
+                        </dl>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+            <tbody>
+    <!-- Sección de Referencias HTML -->
+    <tr class="category" onclick="toggleCategory('referencias-html')" style="background-color: #e5e5ea; color: #000;">
+        <td colspan="5">Referencias</td>
+    </tr>
+    <tr class="referencias-html hidden">
+        <td colspan="5">
+            <ul class="animated-list">
+                <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" class="apple-link">MDN Web Docs - HTML</a></li><br>
+                <li><a href="https://www.w3schools.com/html/" target="_blank" class="apple-link">W3Schools - HTML Tutorial</a></li><br>
+                <li><a href="https://html.spec.whatwg.org/multipage/" target="_blank" class="apple-link">HTML Living Standard (WHATWG)</a></li><br>
+                <li><a href="https://caniuse.com/" target="_blank" class="apple-link">Can I Use - Compatibilidad HTML</a></li>
+            </ul>
+        </td>
+    </tr>
+</tbody>
+
+            
+        </table>
+        </div>
+        <br><br>
+        <button type="button" class="button" onclick="location.href='css.html'">Ver glosario ccs</button>
+        
+
+        <br><br>
+        <footer>
+            <center><p>&copy; Desarrollado por: Devmike117</p></center>
+        </footer>
+
+</body>
+</html>

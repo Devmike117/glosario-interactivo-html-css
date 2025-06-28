@@ -1,0 +1,93 @@
+/* 	En el archivo CSS, define los estilos básicos para los elementos de la página, 
+como cambiar el color de fondo, el tamaño de la fuente y los márgenes. 
+Usa selectores de clase, id y etiquetas HTML para aplicar los estilos a diferentes partes de la página */
+
+
+
+/* Estiliza la lista, los encabezados y la imagen para hacer que la página se vea más atractiva visualmente.
+*/
+
+
+/* reset basico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* contenedor general */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* estilos generales */
+body {
+    background-color: #61dafb;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* encabezado */
+#main-header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* contenido */
+.contenido {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* imagen principal */
+.imagen-gato {
+    width: 50%;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 auto 20px auto; 
+    display: block; 
+    position: relative;
+    overflow: hidden;
+}
+
+/* Lista personalizada */
+.lista {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista li {
+    background-color: #e6f7ff;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-left: 5px solid #4a90e2;
+    border-radius: 6px;
+}
+
+/* derechos de autor  */
+#derechos {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.95em;
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario de Propiedades CSS</title>
+    <link rel="stylesheet" href="css/glosary.css">
+    <script>
+        function toggleCategory(category) {
+            document.querySelectorAll('.' + category).forEach(row => {
+                row.classList.toggle('hidden');
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Glosario de Propiedades CSS</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                    <th>Sintaxis</th>
+                    <th>Para qué se usa</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="category" onclick="toggleCategory('texto')">
+                    <td colspan="5">Texto</td>
+                </tr>
+                <tr class="texto hidden">
+                    <td>color</td>
+                    <td>Define el color del texto.</td>
+                    <td><pre><code>color: red;</code></pre></td>
+                    <td>Se usa para cambiar el color del texto en una página web.</td>
+                    <td>
+                        <div class="example-container" style="color: red;">Texto en rojo</div>
+                    </td>
+                </tr>
+                <tr class="texto hidden">
+                    <td>font-size</td>
+                    <td>Define el tamaño del texto.</td>
+                    <td><pre><code>font-size: 20px;</code></pre></td>
+                    <td>Se usa para ajustar el tamaño de la fuente del texto.</td>
+                    <td>
+                        <div class="example-container" style="font-size: 20px;">Texto grande</div>
+                        <div class="example-container" style="font-size: 10px;">Texto pequeño</div>
+                    </td>
+                </tr>
+                <tr class="texto hidden">
+                    <td>font-family</td>
+                    <td>Define la familia de fuentes del texto.</td>
+                    <td><pre><code>font-family: Arial, sans-serif;</code></pre></td>
+                    <td>Se usa para cambiar el tipo de letra del texto.</td>
+                    <td>
+                        <div class="example-container" style="font-family: Arial, sans-serif;">Texto con fuente Arial</div>
+                        <div class="example-container" style="font-family: 'Courier New', monospace;">Texto con fuente Courier New</div>
+                    </td>
+                </tr>
+                <tr class="texto hidden">
+                    <td>text-align</td>
+                    <td>Define la alineación del texto.</td>
+                    <td><pre><code>text-align: center; <br>text-aling: left; <br>text-aling: right;</code></pre></td>
+                    <td>Se usa para alinear el texto a la izquierda, derecha o centro.</td>
+                    <td>
+                        <div class="example-container" style="text-align: center;">Texto centrado</div>
+                        <div class="example-container" style="text-align: left;">Texto alineado a la izquierda</div>
+                        <div class="example-container" style="text-align: right;">Texto alineado a la derecha</div>
+                    </td>
+                </tr>
+                <tr class="texto hidden">
+                    <td>text-decoration</td>
+                    <td>Define la decoración del texto.</td>
+                    <td><pre><code>text-decoration: underline;</code></pre></td>
+                    <td>Se usa para subrayar, tachar o resaltar el texto.</td>
+                    <td>
+                        <div class="example-container" style="text-decoration: underline;">Texto subrayado</div>
+                    </td>
+                </tr>
+                <tr class="texto hidden">
+                    <td>text-transform</td>
+                    <td>Define la transformación del texto.</td>
+                    <td><pre><code>text-transform: uppercase;</code></pre></td>
+                    <td>Se usa para cambiar el texto a mayúsculas, minúsculas o capitalizar.</td>
+                    <td>
+                        <div class="example-container" style="text-transform: uppercase;">Texto en mayúsculas</div>
+                    </td>
+                </tr>
+                
+                <tr class="category" onclick="toggleCategory('fondo')">
+                    <td colspan="5">Fondo</td>
+                </tr>
+                <tr class="fondo hidden">
+                    <td>background-color</td>
+                    <td>Define el color de fondo de un elemento.</td>
+                    <td><pre><code>background-color: yellow;</code></pre></td>
+                    <td>Se usa para cambiar el color de fondo de un elemento.</td>
+                    <td>
+                        <div class="example-container" style="background-color: yellow;">Fondo amarillo</div>
+                    </td>
+                </tr>
+                
+                <tr class="fondo hidden">
+                    <td>background-image</td>
+                    <td>Establece una imagen como fondo.</td>
+                    <td><pre><code>background-image: url('imagen.jpg');</code></pre></td>
+                    <td>Se usa para colocar una imagen como fondo.</td>
+                    <td>
+                        <p>Ejemplo de fondo con imagen</p>
+                        <div class="example-container" style="background-image: url('image/gato.gif'); width: 100px; height: 100px; background-size: contain; background-repeat: no-repeat;"></div>
+                    </td>
+                </tr>
+                <!-- opacity-->
+                 <tr class="fondo hidden">
+                    <td>opacity</td>
+                    <td>Define la opacidad de un elemento.</td>
+                    <td><pre><code>opacity: 0.5;</code></pre></td>
+                    <td>Se usa para hacer un elemento semi-transparente.</td>
+                    <td>
+                        <div class="example-container" style="background-image: url('image/gato.gif'); opacity: .4; width: 100px; height: 100px; background-size: contain; background-repeat: no-repeat;"></div>
+                    </td>     
+
+                 </tr>
+                
+                
+                <tr class="category" onclick="toggleCategory('borde')">
+                    <td colspan="5">Bordes</td>
+                </tr>
+                <tr class="borde hidden">
+                    <td>border</td>
+                    <td>Define un borde alrededor de un elemento.</td>
+                    <td><pre><code>border: 2px solid black;</code></pre></td>
+                    <td>Se usa para agregar un borde.</td>
+                    <td>
+                        <div class="example-container" style="border: 2px solid black;">Texto con borde</div>
+                    </td>
+                </tr>
+                <tr class="borde hidden">
+                    <td>border-radius</td>
+                    <td>Redondea las esquinas de un borde.</td>
+                    <td><pre><code>border-radius: 10px;</code></pre></td>
+                    <td>Se usa para hacer bordes redondeados.</td>
+                    <td>
+                        <div class="example-container" style="border: 2px solid black; border-radius: 10px;">Borde redondeado</div>
+                    </td>
+                </tr>
+                
+                <tr class="category" onclick="toggleCategory('espaciado')">
+                    <td colspan="5">Espaciado</td>
+                </tr>
+                <tr class="espaciado hidden">
+                    <td>margin</td>
+                    <td>Define el margen externo de un elemento.</td>
+                    <td><pre><code>margin: 20px;</code></pre></td>
+                    <td>Se usa para definir el espacio exterior alrededor de un elemento.</td>
+                    <td>
+                        <div class="example-container" style="margin: 20px; ">Margen de 20px</div>
+                        <div class="example-container" style="margin: 30px; ">Margen de 30px</div>
+                        <div class="example-container" style="margin: 40px; ">Margen de 40px</div>
+                    </td>
+                </tr>
+                <tr class="espaciado hidden">
+                    <td>padding</td>
+                    <td>Define el relleno interno de un elemento.</td>
+                    <td><pre><code>padding: 15px;</code></pre></td>
+                    <td>Se usa para definir el espacio interno dentro de un elemento.</td>
+                    <td>
+                        <div class="example-container" style="padding: 15px;  ">espacio de 15px</div>
+                        <div class="example-container" style="padding: 20px;  ">espacio de 20px</div>
+                        <div class="example-container" style="padding: 25px;  ">espacio de 25px</div>
+                    </td>
+                </tr>
+                <tr class="espaciado hidden">
+                    <td>box-shadow</td>
+                    <td>Agrega una sombra a un elemento.</td>
+                    <td><pre><code>box-shadow: 5px 5px 10px gray;</code></pre></td>
+                    <td>Se usa para crear un efecto de sombra alrededor de un elemento.</td>
+                    <td>
+                        <div class="example-container" style="box-shadow: 5px 5px 10px gray; padding: 20px; ">Sombra de caja</div>
+                    </td>
+                </tr>
+                <!-- width-->
+                <tr class="espaciado hidden">
+                    <td>width</td>
+                    <td>Define el ancho de un elemento.</td>
+                    <td><pre><code>width: 200px;</code></pre></td>
+                    <td>Se usa para establecer el ancho de un elemento.</td>
+                    <td>
+                        <div class="example-container" style="width: 200px; height: 50px; ">Ancho de 200px</div>
+                        <div class="example-container" style="width: 300px; height: 50px; ">Ancho de 300px</div>
+                    </td>
+                </tr>
+                <!-- height-->  
+                <tr class="espaciado hidden">
+                    <td>height</td>
+                    <td>Define la altura de un elemento.</td>
+                    <td><pre><code>height: 100px;</code></pre></td>
+                    <td>Se usa para establecer la altura de un elemento.</td>
+                    <td>
+                        <div class="example-container" style="width: 50px; height: 100px;">Altura de 100px</div>
+                        <div class="example-container" style="width: 50px; height: 150px; ">Altura de 150px</div>
+                    </td>
+                </tr>
+                <tr class="espaciado hidden">
+                    <td>overflow</td>
+                    <td>Controla el desbordamiento de contenido.</td>
+                    <td><pre><code>overflow: hidden;</code></pre></td>
+                    <td>Se usa para ocultar, mostrar o agregar barras de desplazamiento al contenido que desborda un elemento.</td>
+                    <td>
+                        <div class="example-container" style="width: 100px; height: 50px; overflow: hidden; ">Contenido oculto</div>
+                        <div class="example-container" style="width: 100px; height: 50px; overflow: scroll; ">Contenido con scroll: <br> CSS, de las siglas en inglés Cascading Style Sheets (Hojas de Estilo en Cascada), es un lenguaje declarativo que controla el aspecto de las páginas web en el navegador. El navegador aplica declaraciones de estilo CSS a los elementos seleccionados para exhibirlos correctamente. Una declaración de estilos contiene las propiedades y sus respectivos valores, los cuales determinan cómo se verá una página web.</div>
+                    </td>
+                </tr>
+                <tr class="espaciado hidden">
+                    <td>display</td>
+                    <td>Define el tipo de visualización de un elemento.</td>
+                    <td><pre><code>display: block;</code></pre></td>
+                    <td>Se usa para cambiar cómo se muestra un elemento en la página.</td>
+                    <td>
+                        <div class="example-container" style="display: block; ">Elemento de bloque</div>
+                        <div class="example-container" style="display: inline-block; ">Elemento en línea</div>
+                    </td>
+                </tr>
+                <tr class="espaciado hidden">
+                    <td>float</td>
+                    <td>Flota un elemento a la izquierda o derecha.</td>
+                    <td><pre><code>float: left;</code></pre></td>
+                    <td>Se usa para colocar un elemento a la izquierda o derecha de su contenedor.</td>
+                    <td>
+                        <div class="example-container" style="float: left; width: 50px; height: 50px; ">Flotante a la izquierda</div>
+                        <div class="example-container" style="float: right; width: 50px; height: 50px; ">Flotante a la derecha</div>
+                    </td>
+                </tr>
+                <tr class="espaciado hidden">
+                    <td>position</td>
+                    <td>Define la posición de un elemento.</td>
+                    <td><pre><code>position: absolute;</code></pre></td>
+                    <td>Se usa para posicionar un elemento de forma absoluta, relativa o fija.</td>
+                    <td>
+                        <br><br><br>
+                        <div class="example-container" style="position: absolute;  ">Posición absoluta</div>
+                        <br><br><br>
+                        <div class="example-container" style="position: relative;  ">Posición relativa</div>
+                    </td>
+                </tr>
+                <!--Efectos-->
+                <tr class="category" onclick="toggleCategory('efectos')">
+                    <td colspan="5">Efectos</td>
+                    <tr class="efectos hidden">
+                        <td>transition</td>
+                        <td>Define una transición suave entre estados.</td>
+                        <td>
+                            <pre><code>transition: background-color 0.3s ease, width 0.3s ease;</code></pre>
+                        </td>
+                        <td>Se usa para crear efectos de transición al cambiar propiedades.</td>
+                        <td>
+                            <div class="example-container">
+                                <p>Pasa el cursor sobre el cuadrado</p>
+                                <style>
+                                        
+                                            .example-container div {
+                                                width: 50px;
+                                                height: 50px;
+                                                background-color: rgb(32, 170, 221);
+                                                transition: all 0.3s ease;
+                                            }
+                            
+                                            .example-container div:hover {
+                                                width: 150px;
+                                                height: 150px;
+                                                background-color: rgb(228, 11, 170);
+                                            }
+                                    
+                                </style>
+                                <div class="transition-box"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr class="efectos hidden">
+                        <td>animation</td>
+                        <td>Define una animación para un elemento.</td>
+                        <td>
+                            <pre><code>animation: slide 2s infinite;</code></pre>
+                        </td>
+                        <td>Se usa para crear animaciones complejas.</td>
+                        <td>
+                            <div class="example-container">
+                                <p>Ejemplo de animación</p>
+                                <style>
+                                    .example-container .animation-box {
+                                        width: 50px;
+                                        height: 50px;
+                                        background-color: rgb(32, 170, 221);
+                                        position: relative;
+                                        animation: slide 2s infinite alternate;
+                                    }
+                    
+                                    @keyframes slide {
+                                        0% { left: 0; }
+                                        100% { left: 100px; }
+                                    }
+                                </style>
+                                <div class="animation-box"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </tr>
+                <!--cursor-->
+                <tr class="efectos hidden">
+                    <td>cursor</td>
+                    <td>Define el tipo de cursor al pasar sobre un elemento.</td>
+                    <td><pre><code>cursor: pointer;</code></pre></td>
+                    <td>Se usa para cambiar el cursor al pasar sobre un elemento.</td>
+                    <td>
+                        <div class="example-container" style="cursor: pointer;  ">Cursor puntero</div>
+                        <div class="example-container" style="cursor: crosshair;  ">Cursor cruz</div>
+                        <div class="example-container" style="cursor: move;  ">Cursor mover</div>
+                        <div class="example-container" style="cursor: text;  ">Cursor texto</div>
+                        <div class="example-container" style="cursor: help;  ">Cursor ayuda</div>
+                    </td>
+                </tr>
+                <!--cursor-->
+
+                
+               
+                
+            </tbody>
+            <tbody>
+                <!-- Sección de Referencias -->
+                <tr class="category" onclick="toggleCategory('referencias')" style="background-color: #e5e5ea; color: #000;">
+                    <td colspan="5">Referencias</td>
+                </tr>
+                <tr class="referencias hidden">
+                    <td colspan="5">
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" class="apple-link">MDN Web Docs - CSS</a></li><br>
+                            <li><a href="https://www.w3schools.com/css/" target="_blank" class="apple-link">W3Schools - CSS Tutorial</a></li><br>
+                            <li><a href="https://css-tricks.com/" target="_blank" class="apple-link">CSS Tricks</a></li><br>
+                            <li><a href="https://caniuse.com/" target="_blank" class="apple-link">Can I Use - Compatibilidad CSS</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+            
+            
+        </table>
+    </main>
+    <br><br>
+    <button class='button' onclick="window.location.href='index.html'">Volver a la página principal</button>
+    <br><br>
+    <footer>
+        <center><p>&copy; Desarrollado por: Mike GH</p></center>
+    </footer>
+</body>
+</html>
